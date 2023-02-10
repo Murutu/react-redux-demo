@@ -11,7 +11,14 @@ const initialState = {
 const cartSlice = createSlice({
     name: "cart",
     initialState,
+    reducers: {
+        clearCart:(state) => {
+            state.cartItems = []
+        }
+    }
 });
+
+export const {clearCart} = cartSlice.actions
 
 export default cartSlice.reducer;
 
@@ -39,4 +46,19 @@ import cartItems from "../../cartItems";
 const initialState = {
     cartItems: cartItems
 }
+
+const cartSlice = createSlice({
+    name: "cart",
+    initialState,
+    reducers: {
+        clearCart:(state) => {
+            state.cartItems = []
+        }
+    }
+})
+
+console.log(cartSlice); check the actions to see the clearCart
+then
+
+export const {clearCart} = cartSlice.actions
 */
