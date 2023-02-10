@@ -1,3 +1,5 @@
+// icons are from heroicons this is a suitable way to use them
+
 export const CartIcon = () => {
     return (
       <svg

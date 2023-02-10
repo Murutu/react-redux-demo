@@ -28,4 +28,8 @@ console.log(
 ) => to check if you have the store
 
 We can use the useSelector to access the entire store
+
+then
+
+const {amount} = useSelector((store) => store.data); => we destructure amount
 */
