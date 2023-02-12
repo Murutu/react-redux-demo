@@ -22,6 +22,10 @@ const CartItem = ({id, img, title, price, amount}) => {
         </button>
         <p className="amount">{amount}</p>
         <button className="amount-btn" onClick={() => {
+          if(amount === 1) {
+            dispatch(removeItem(id));
+            return;
+          }
           dispatch(decrease({id}))
         }}>
           <ChevronDown />
@@ -52,4 +56,11 @@ const cartItem = () => {
 export default cartItem;
 
 Always add the id
+
+To prevent it from toggling to -1
+
+if(amount === 1) {
+  dispatch(removeItem(id));
+  return;
+}
 */
